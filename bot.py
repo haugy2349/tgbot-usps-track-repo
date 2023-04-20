@@ -7,7 +7,7 @@ def get_tracker_info(tracking_number):
     return usps.track_summary() 
 
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id)
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to the USPS tracking bot! Please enter your tracking number to get started.")
 
 def fetch_tracking_number(update, context):
     tracking_number = update.message.text
